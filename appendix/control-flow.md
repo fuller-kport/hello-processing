@@ -147,7 +147,64 @@ float x = random(500);
 
 1. 円の数を 3 つではなく 100 個に増やしてみて下さい。
 2. 円の大きさをランダムにしてみて下さい。
+
+解答例)
+
+```java
+void setup() {
+  size(500, 500);
+
+  for (int i = 0; i < 100; i++) {
+    float x = random(500);
+    float y = random(500);
+    float d = random(100);
+    circle(x, y, d);
+  }
+}
+```
+
 3. 円の色をランダムにして下さい。
+
+解答例 1)
+
+```java
+void setup() {
+  size(500, 500);
+
+  for (int i = 0; i < 100; i++) {
+    float x = random(500);
+    float y = random(500);
+
+    float r = random(255);
+    float g = random(255);
+    float b = random(255);
+    fill(r, g, b);
+
+    circle(x, y, 100);
+  }
+}
+```
+
+解答例 2)
+
+```java
+void setup() {
+  size(500, 500);
+
+  colorMode(HSB, 360, 100, 100); // HSBカラー
+
+  for (int i = 0; i < 100; i++) {
+    float x = random(500);
+    float y = random(500);
+
+    float hue = random(180, 240); // 180 ~ 240のランダム値
+    fill(hue, 80, 100);
+
+    circle(x, y, 100);
+  }
+}
+```
+
 4. 下の画像のように正方形を敷き詰めてみて下さい。
 
 <img src="../assets/images/grid.png" alt="grid" width="120px">
