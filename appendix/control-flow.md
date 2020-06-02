@@ -148,3 +148,10 @@ float x = random(500);
 1. 円の数を 3 つではなく 100 個に増やしてみて下さい。
 2. 円の大きさをランダムにしてみて下さい。
 3. 円の色をランダムにして下さい。
+4. 下の画像のように正方形を敷き詰めてみて下さい。
+
+<img src="../assets/images/grid.png" alt="grid" width="120px">
+
+5. 下の画像のように円を敷き詰めてみて下さい。
+
+<img src="../assets/images/circles.png" alt="circles" width="120px">
