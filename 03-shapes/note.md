@@ -63,7 +63,7 @@ void setup() {
 }
 ```
 
-### 長方形 - [`square()`](https://processing.org/reference/square_.html)
+### 長方形 - [`rect()`](https://processing.org/reference/rect_.html)
 
 ```java
 void setup() {
@@ -121,7 +121,7 @@ void draw() {
 }
 ```
 
-### `mouseX` と `mouseY` を使ってマウスの位置に応じて大きさが変わる円
+### `mouseX` と `mouseY` を使ってマウスの位置に応じて色が変わる円
 
 ```java
 void setup() {
