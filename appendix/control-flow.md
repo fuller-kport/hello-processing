@@ -152,6 +152,39 @@ float x = random(500);
 
 <img src="../assets/images/grid.png" alt="grid" width="120px">
 
+解答例)
+
+```java
+void setup() {
+  size(500, 500);
+
+  float step = 100;
+
+  for (float x = 0; x < width; x += step) {
+    for (float y = 0; y < height; y += step) {
+      square(x, y, step);
+    }
+  }
+}
+```
+
 5. 下の画像のように円を敷き詰めてみて下さい。
 
 <img src="../assets/images/circles.png" alt="circles" width="120px">
+
+解答例)
+
+```java
+void setup() {
+  size(500, 500);
+
+  float step = 100;
+
+  for (float x = 0; x < width; x += step) {
+    for (float y = 0; y < height; y += step) {
+      float r = step / 2;
+      circle(x + r, y + r, step);
+    }
+  }
+}
+```
