@@ -101,8 +101,121 @@ void mouseReleased() {
 }
 ```
 
+システム変数の[`mousePressed`](https://processing.org/reference/mousePressed.html) は，マウスクリックが押されているときだけ `true` になります。
+
+また，`pmouseX` と `pmouseY` をつかうと 1 フレーム前のマウスの座標値にアクセスできる。これらを使うとペンツールをつくることができる（以下のコードを実行）。
+
+```java
+void setup() {
+  size(500, 500);
+  stroke(255, 255, 255);
+  background(0, 0, 0);
+}
+
+void draw() {
+  if (mousePressed) {
+    line(pmouseX, pmouseY, mouseX, mouseY);
+  }
+}
+```
+
+---
+
 演習として，以下のように動作するコードを書いてみてください。
 
 <img src="../assets/images/mouse-demo.gif" alt="Mouse demo" width="250px">
 
 ## キーボード
+
+以下はキーボードで "S" を押すとその瞬間のキャンバスを画像で保存するプログラムです。
+
+```java
+void setup() {
+  size(500, 500);
+  noStroke();
+  background(255, 255, 255);
+}
+
+void draw() {
+  // ランダムな位置
+  float x = random(width);
+  float y = random(height);
+
+  // ランダムな色
+  float r = random(100, 255);
+  float g = random(100, 255);
+  float b = random(100, 255);
+  fill(r, g, b, 80);
+
+  square(x, y, 80);
+}
+
+void keyPressed() {
+  if (key == 's' || key == 'S') {
+    saveFrame("demo.png");
+  }
+}
+```
+
+[`keyPressed()`](https://processing.org/reference/keyPressed_.html) 関数はキーボードのボタンを押したときに呼ばれます。キーを離したときに処理を実行したい場合には[`keyReleased()`](https://processing.org/reference/keyReleased_.html) 関数を使うと良いでしょう。
+
+システム変数の[`keyPressed`](https://processing.org/reference/keyPressed.html)はキーボードのキーが押されている間だけ `true` になります。
+
+また，[`keyCode`](https://processing.org/reference/keyCode.html) は矢印キーや Alt，Ctrl などの特殊なキーの入力検知するのに役立ちます。
+
+```java
+float size = 10;
+
+void setup() {
+  size(500, 500);
+  fill(0, 0, 0);
+}
+
+void draw() {
+  if (keyPressed && keyCode == UP) {
+   size = size + 1;
+  }
+
+  background(255, 255, 255);
+  circle(width / 2, height / 2, size);
+}
+```
+
+矢印キーに応じて円を動かせばゲームが作れるかもしれません。
+
+```java
+float px = 0.0;
+float py = 0.0;
+float vx = 0.0;
+float vy = 0.0;
+
+void setup() {
+  size(500, 500);
+  px = width / 2;
+  py = height / 2;
+}
+
+void draw() {
+  px = px + vx;
+  py = py + vy;
+
+  background(0, 0, 0);
+  circle(px, py, 50);
+}
+
+void keyPressed() {
+  if (keyCode == UP) {
+    vx = 0.0;
+    vy = -1.0;
+  } else if (keyCode == RIGHT) {
+    vx = 1.0;
+    vy = 0.0;
+  } else if (keyCode == DOWN) {
+    vx = 0.0;
+    vy = 1.0;
+  } else if (keyCode == LEFT) {
+    vx = -1.0;
+    vy = 0.0;
+  }
+}
+```
