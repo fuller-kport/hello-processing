@@ -128,7 +128,56 @@ void draw() {
 
 ## sin 関数と cos 関数
 
-TBD
+**cos 関数** も三角関数の最も基本的な関数のひとつです。sin 関数と cos 関数の関係をみてみるために，次のプログラムを実行してみて下さい。
+
+```java
+float radius = 200;
+
+void setup() {
+  size(500, 500);
+}
+
+void draw() {
+  background(255);
+  stroke(0);
+  fill(255);
+
+  float centerX = width / 2;
+  float centerY = height / 2;
+  circle(centerX, centerY, radius * 2);
+  line(0, centerY, width, centerY); // X軸
+  line(centerX, 0, centerX, height); // Y軸
+
+  pushMatrix();
+  translate(centerX, centerY);
+
+  float theta = atan2(mouseY - centerY, mouseX - centerY);
+  float x = radius * cos(theta);
+  float y = radius * sin(theta);
+
+  strokeWeight(2);
+  line(0, 0, x, y);
+
+  strokeWeight(1);
+  circle(x, y, 10);
+  line(x, y, 0, y);
+  line(x, y, x, 0);
+
+  // cos
+  fill(#262E8E);
+  circle(x, 0, 10);
+
+  // sin
+  fill(#55854E);
+  circle(0, y, 10);
+
+  popMatrix();
+}
+```
+
+円周上の点（白丸）と真ん中の原点を結ぶ直線がなす角は，マウスの動きによって変化します。緑色と青色の点がそれぞれ sin 関数と cos 関数のふるまいです。
+
+<img src="../assets/images/sin-cos.png" alt="Sin and Cos" width="240px">
 
 ### 回転
 
