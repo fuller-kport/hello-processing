@@ -206,7 +206,7 @@ void setup() {
 }
 ```
 
-角マスをランダムな色で塗ってみます。ランダムな色で塗るには以下のコードを `square()` の直前に挿入しましょう。
+各マスをランダムな色で塗ってみます。ランダムな色で塗るには以下のコードを `square()` の直前に挿入しましょう。
 
 ```java
 fill(random(255));
@@ -239,7 +239,3 @@ void setup() {
 ```
 
 <img src="../assets/images/random-grid-01.png" alt="Perlin noise grid" width="200px">
-
----
-
-残りの時間はノイズで遊んでみましょう。
