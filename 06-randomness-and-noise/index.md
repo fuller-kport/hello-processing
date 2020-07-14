@@ -80,6 +80,33 @@ void draw() {
 
 <img src="../assets/images/gaussian-marbles.png" alt="Gaussian marbles" width="200px">
 
+解答例）
+
+```java
+void setup() {
+  size(500, 500);
+  noStroke();
+  background(255, 255, 255);
+}
+
+void draw() {
+  // ランダムな色
+  float r = random(100, 255);
+  float g = random(100, 255);
+  float b = random(100, 255);
+  fill(r, g, b, 80);
+
+  // ランダムな位置
+  float dx = 50 * randomGaussian();
+  float dy = 50 * randomGaussian();
+  float centerX = width / 2;
+  float centerY = height / 2;
+  float x = centerX + dx;
+  float y = centerY + dy;
+  circle(x, y, 20);
+}
+```
+
 ---
 
 ## ノイズ
