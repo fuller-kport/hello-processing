@@ -66,6 +66,7 @@ void draw() {
   float centerX = width / 2;
   float e = width * 0.2;
   float x = centerX + e * randomGaussian();
+  line(x, 0, x, height);
 }
 ```
 
