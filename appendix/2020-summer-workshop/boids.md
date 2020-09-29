@@ -9,7 +9,11 @@
 
 「群れ」のシミュレーションにおいては，1986 年にクレイグ・レイノルズが提案した「ボイド（Boid）」というモデルが有名です。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3bTqWsVqyzE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="width: 320px;">
+  <a href="https://www.youtube.com/watch?v=3bTqWsVqyzE">
+      <img src="https://img.youtube.com/vi/3bTqWsVqyzE/0.jpg" style="width:100%;">
+  </a>
+</div>
 
 ## Boid クラスの用意
 
