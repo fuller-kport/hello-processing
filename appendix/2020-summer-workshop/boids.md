@@ -9,9 +9,9 @@
 
 「群れ」のシミュレーションにおいては，1986 年にクレイグ・レイノルズが提案した「ボイド（Boid）」というモデルが有名です。
 
-<div style="width: 320px;">
-  <a href="https://www.youtube.com/watch?v=3bTqWsVqyzE">
-      <img src="https://img.youtube.com/vi/3bTqWsVqyzE/0.jpg" style="width:100%;">
+<div>
+  <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3bTqWsVqyzE">
+      <img src="https://img.youtube.com/vi/3bTqWsVqyzE/0.jpg" width="240" height="160">
   </a>
 </div>
 
