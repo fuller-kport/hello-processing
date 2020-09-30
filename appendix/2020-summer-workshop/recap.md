@@ -398,8 +398,7 @@ void setup() {
 
 void draw() {
   for (int i = 0; i <  balls.length; i++) {
-    Ball b = balls[i];
-    circle(b.position.x, b.position.y, b.radius * 2);
+    balls[i].render();
   }
 }
 ```
@@ -410,7 +409,7 @@ void draw() {
 
 - **演習 1**： `Ball` クラスに速度ベクトルを追加して 100 個のボールを動かしてみましょう。
 - **演習 2**： `Ball` クラスに位置の更新を行う `update()` メソッドを追加してみましょう。
-- **演習 3**： ランダムな位置，ランダムな半径を物ボールを作成する関数 `createRandomBall()` 関数を追加してみましょう。
+- **演習 3**： ランダムな位置，ランダムな半径を持つボールを作成する関数 `createRandomBall()` 関数を追加してみましょう。
 
 ```java
 class Ball {
