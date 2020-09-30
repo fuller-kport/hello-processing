@@ -55,9 +55,9 @@ class Ball {
   PVector velocity;
   PVector acceleration;
 
-  Ball(PVector position, PVector velocity) {
+  Ball(PVector position) {
     this.position = position;
-    this.velocity = velocity;
+    this.velocity = new PVector(0, 0);
     this.acceleration = new PVector(0, 0);
   }
 
