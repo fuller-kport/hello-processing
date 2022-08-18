@@ -6,7 +6,7 @@ Processing で円や多角形などの様々な形を描画する方法をみて
 
 Processing の座標系は以下の図のようになっています。
 
-<img src="../assets/images/coordinates.png" alt="Coordinates" width="250px">
+<img src="../assets/images/coordinates.png" alt="Coordinates" style="width:360px">
 
 左上が原点 `(x, y) = (0, 0)` です。X 軸が右方向に正，Y 軸が下方向に正です。
 
