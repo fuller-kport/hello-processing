@@ -17,7 +17,9 @@ void setup() {
 }
 ```
 
-[`background()`](https://processing.org/reference/background_.html) 関数には RGB の値を 0~255 までの整数値でそれぞれ指定します。（なぜ 255 なのかについては後ほど説明します。）
+`setup()` 関数は、プログラムを実行したときに 1 回だけ呼び出されます。
+
+[`background()`](https://processing.org/reference/background_.html) は背景色を指定する関数で、 RGB の値を 0~255 までの整数値でそれぞれ指定します。
 
 実際にそれぞれの値を変更して実行してみて下さい。
 
@@ -45,13 +47,10 @@ void setup() {
   noStroke();
   colorMode(HSB, width, height, 100);
 
-  int stepX = 20;
-  int stepY = 20;
-
-  for (int i = 0; i < height; i += stepY) {
-    for (int j = 0; j < width; j += stepX) {
-      fill(j, height - i, 100);
-      rect(j, i, stepX, stepY);
+  for (int i = 0; i < width; i++) {
+    for (int j = 0; j < height; j++) {
+      color c = color(i, height - j, 100);
+      set(i, j, c);
     }
   }
 }
